@@ -1716,7 +1716,7 @@ function renderImages(){
 function renderVideos(){
   videosGrid.innerHTML = allVideos.slice(0, vidsShown).map((src, idx) => `
     <div class="vid-card" data-src="${src}">
-      <video src="${src}" muted preload="metadata"></video>
+      <video src="${src}#t=0.5" muted playsinline preload="metadata"></video>
       <div class="play-ic"><svg><use href="#ic-play"/></svg></div>
     </div>`).join('');
   document.getElementById('loadMoreVids').style.display = vidsShown >= allVideos.length ? 'none' : 'inline-flex';
